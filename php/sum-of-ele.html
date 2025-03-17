@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Sum of elements in array</title>
+  </head>
+  <body>
+    <button onclick="findSum()">Start</button>
+  </body>
+  <script>
+    function findSum() {
+      const arr = prompt("Enter numbers seperated by coma")
+        .split(",")
+        .map(Number);
+
+      alert("Sum: " + arr.reduce((a, b) => a + b, 0));
+    }
+  </script>
+</html>

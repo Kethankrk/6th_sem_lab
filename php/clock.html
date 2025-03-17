@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Clock</title>
+    <body>
+      <h1 id="clock"></h1>
+    </body>
+    <script>
+      const clock = document.getElementById("clock");
+      function updateClock() {
+        const now = new Date();
+        const h = ("0" + now.getHours()).slice(-2);
+        const m = ("0" + now.getMinutes()).slice(-2);
+        const s = ("0" + now.getSeconds()).slice(-2);
+        const AmPm = now.getHours() >= 12 ? "PM" : "AM";
+        clock.innerText = `${h}:${m}:${s} ${AmPm}`;
+      }
+      setInterval(updateClock, 1000);
+      updateClock();
+    </script>
+  </head>
+</html>
