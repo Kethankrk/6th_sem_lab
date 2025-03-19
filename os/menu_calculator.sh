@@ -11,7 +11,11 @@ while true; do
     read -p "Enter your choice (eq: 1): " USER_INPUT
 
     if [ $USER_INPUT -eq 5 ]; then
+        echo "Goodbye!"
         break
+    elif [ $USER_INPUT -gt 5 ]; then
+        echo "Invalid input, please try again!"
+        continue
     fi
 
     read -p "Enter a number: " num1
